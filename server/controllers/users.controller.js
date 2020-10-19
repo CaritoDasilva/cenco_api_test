@@ -36,7 +36,6 @@ module.exports.getCreditsUser = (req, res) => {
 module.exports.createNewUser = (req, res) => {
     User.create(req.body)
         .then(newlyCreatedUser => res.json({ user: newlyCreatedUser }))
-        // .catch(err => res.json({ message: "Something went wrong", error: err }));
         .catch(err => res.status(400).json(err))
 };
 
