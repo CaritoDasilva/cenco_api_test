@@ -11,7 +11,8 @@
 # API Documentation:
   - /api/credits/users => Trae todos los usuarios
   - /api/credits/stores => Muestra todas las tiendas con sus respectivos créditos
-  - /api/credits/user  => MOdifica los creditos de un usuario. Se envía el siguiente body:
+  -/api/credits/stores/:store => Muestra el saldo de una tienda en particular, realiza la búsqueda por nombre
+  - /api/credits/user  => Modifica los creditos de un usuario. Se envía el siguiente body:
 >       
         {
             "id": string,
