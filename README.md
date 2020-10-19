@@ -22,7 +22,7 @@
                 "amount": number
             }
         }
--api/credits/user/:id => Muestra el crédito de un usuario específico por ID
+-/api/credits/users/:id => Muestra el crédito de un usuario específico por ID
 -/api/credits/new => Crea un nuevo usuario. Se envía el siguiente body:
 >    
     {
