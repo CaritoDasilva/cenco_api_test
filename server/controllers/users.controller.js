@@ -7,10 +7,11 @@ module.exports.findAllUsers = (req, res) => {
         .catch(err => res.json({ message: "Something went wrong", error: err }));
 };
 
-module.exports.findOneSingleUser = (req, res) => {
-    User.findOne({ _id: req.body.id })
+module.exports.findUserById = (req, res) => {
+    User.findOne({ _id: req.params.id })
         .then(oneSingleUser => res.json({ user: oneSingleUser }))
         .catch(err => res.json({ message: "Something went wrong", error: err }));
+
 };
 
 module.exports.getCreditsUser = (req, res) => {
