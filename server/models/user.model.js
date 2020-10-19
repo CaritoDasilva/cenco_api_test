@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
-const Credit = require('./credit.model');
 
 const CreditStoreSchema = new mongoose.Schema({
     store: {

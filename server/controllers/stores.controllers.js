@@ -3,10 +3,6 @@ const creditService = require("../services/credits.services");
 
 //By Store
 
-module.exports.getAllStores = (req, res) => {
-
-}
-
 module.exports.getCreditsByStore = (req, res) => {
     User.aggregate([{
         $project:
@@ -24,8 +20,7 @@ module.exports.getCreditsByStore = (req, res) => {
     }])
         .then(allUsers => {
             if (allUsers) {
-                totalByStore = creditService.getCreditByStore(allUsers);
-                console.log("module.exports.getCreditsByStore -> store", totalByStore);
+                totalByStore = creditService.getStoreCredit(allUsers, allUsers);
                 return res.json({
                     totalStore: {
                         store: req.params.store,
@@ -42,6 +37,7 @@ module.exports.getCreditsAllStores = (req, res) => {
         { $unwind: "$credit" },
         { $group: { _id: "$credit.store", amount: { $sum: "$credit.amount" } } }
     ])
-        .then(allUsers => res.json({ users: allUsers }))
+        .then(allUsers => res.json({ stores: allUsers })
+        )
         .catch(err => res.json({ message: "Something went wrong", error: err }));
 }
