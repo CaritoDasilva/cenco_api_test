@@ -5,7 +5,7 @@
 | Plataforma | Links |
 | ------ | ------ |
 | GitHub | https://github.com/CaritoDasilva/cenco_api_test |
-| EC2 Deploy | http://3.22.250.68/api/credits/users |
+| Deploy | https://glacial-journey-74952.herokuapp.com/api/credits/users/api/credits/users |
 | Portafolio | https://www.caritodasilva.work/ |
 
 # API Documentation:
